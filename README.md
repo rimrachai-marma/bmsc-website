@@ -63,6 +63,154 @@ bmsc-website/
 └── package.json                 # Dependencies & scripts
 ```
 
+## 🎨 Color Theme & Design Philosophy
+
+### Theme Overview
+
+The BMSC website uses a carefully curated color palette rooted in **nature, heritage, and cultural identity**. Each color is intentionally selected to reflect the Marma community's deep connection to the Chittagong Hill Tracts environment while maintaining modern web accessibility standards.
+
+### Color Palette
+
+| Color            | Hex       | CSS Variable           | Purpose                    | Psychology                         |
+| ---------------- | --------- | ---------------------- | -------------------------- | ---------------------------------- |
+| **Forest**       | `#1a3a2a` | `--color-forest`       | Primary background         | Trust, stability, nature           |
+| **Forest Mid**   | `#2d5a40` | `--color-forest-mid`   | Secondary background       | Balance, growth, harmony           |
+| **Forest Light** | `#3d7a56` | `--color-forest-light` | Tertiary background        | Vitality, healing, hope            |
+| **Leaf**         | `#7ab648` | `--color-leaf`         | Accent - calls to action   | Nature, renewal, prosperity        |
+| **Gold**         | `#c8922a` | `--color-gold`         | Accent - premium/highlight | Prestige, value, tradition         |
+| **Sun**          | `#f0a500` | `--color-sun`          | Accent - energy/warmth     | Energy, optimism, celebration      |
+| **Cream**        | `#f8f3ea` | `--color-cream`        | Text/light backgrounds     | Clarity, warmth, readability       |
+| **Earth**        | `#8b5e3c` | `--color-earth`        | Secondary accent           | Stability, authenticity, grounding |
+| **Muted**        | `#6b6b5a` | `--color-muted`        | Secondary text             | Sophistication, subtle contrast    |
+
+### Design Theory
+
+#### 🌲 Forest Greens (Primary Colors)
+
+- **Foundation of identity**: The three shades of forest green represent the Chittagong Hill Tracts landscape - from deep shadows of the forest to light filtering through canopy
+- **Emotional connection**: Green universally represents nature, growth, and renewal - core values of environmental preservation
+- **Cultural significance**: Reflects the indigenous landscape and environmental stewardship central to Marma community activism
+- **Accessibility**: High contrast ratios ensure readability for all users while maintaining visual harmony
+
+#### 🍃 Leaf Green (Natural Accent)
+
+- **Call to action**: Used for "Join Us" buttons, links, and interactive elements
+- **Psychology**: Represents new beginnings and active participation
+- **Symbolism**: Direct reference to nature and environmental advocacy
+- **Engagement**: Draws attention naturally without feeling aggressive
+
+#### ✨ Gold (Heritage & Prestige)
+
+- **Cultural reverence**: Gold traditionally signifies prestige, cultural heritage, and ceremonial importance
+- **Timeline markers**: Used for historical milestones and important achievements
+- **Premium accents**: Elevates certain sections and components
+- **Warmth**: Creates a welcoming, dignified atmosphere
+- **Tradition**: Connects to cultural ornamentation and artistic heritage
+
+#### ☀️ Sun (Energy & Movement)
+
+- **Vitality**: Represents the vibrancy and energy of youth leadership
+- **Ticker messages**: Used in animated banner sections
+- **Accent highlights**: Brings warmth and optimism to the design
+- **Call-to-action secondary**: Alternative to green for secondary engagement buttons
+- **Celebration**: Used for celebratory content and positive announcements
+
+#### 🟤 Cream (Accessibility & Contrast)
+
+- **Primary text**: Ensures excellent readability on dark backgrounds
+- **Clarity**: High contrast ratio (WCAG AAA compliant)
+- **Warmth**: Avoids harsh pure white, reducing eye strain
+- **Heritage**: Warm ivory tones reflect natural materials and authenticity
+- **Approachability**: Creates a softer, more inviting aesthetic
+
+#### 🪨 Earth Brown (Secondary Support)
+
+- **Grounding**: Provides stability and authenticity
+- **Alternative accent**: Used for secondary navigation and supporting elements
+- **Balance**: Prevents over-reliance on green, creating visual depth
+- **Regional reference**: Represents the soil and landscape of CHT
+
+### Color Usage Guidelines
+
+**Primary Sections**
+
+- Headers and hero sections: Forest gradient backgrounds
+- Main navigation: Forest with cream text
+- Body text: Muted or cream on light backgrounds
+
+**Interactive Elements**
+
+- Primary buttons: Leaf green (`border-(--leaf)`)
+- Secondary buttons: Forest with gold borders
+- Links and calls-to-action: Leaf or gold
+- Hover states: Lighter shade of base color
+
+**Information Hierarchy**
+
+- Most important: Gold and sun accents
+- Secondary: Forest mid and light
+- Tertiary: Muted and earth tones
+
+**Data Visualization**
+
+- Charts: Forest mid, leaf, gold, sun (sequential palette)
+- Highlights: Sun for peaks, forest for valleys
+- Categories: Distinct forest shades with gold/leaf accents
+
+### Accessibility Features
+
+- ✅ **WCAG AAA Compliant**: All text meets minimum contrast ratios
+- ✅ **Color-blind friendly**: Uses varied hues, not just saturation differences
+- ✅ **Reduced motion**: Respects `prefers-reduced-motion` settings
+- ✅ **Dark mode ready**: Palette maintains readability in different lighting
+- ✅ **High contrast option**: Easy to implement alternative palette
+
+### CSS Variables Usage
+
+All colors are defined as CSS custom properties in `globals.css`:
+
+```css
+@theme {
+  --color-forest: #1a3a2a;
+  --color-forest-mid: #2d5a40;
+  --color-forest-light: #3d7a56;
+  --color-leaf: #7ab648;
+  --color-gold: #c8922a;
+  --color-sun: #f0a500;
+  --color-cream: #f8f3ea;
+  --color-earth: #8b5e3c;
+}
+```
+
+Used in Tailwind classes:
+
+```html
+<button className="bg-(--leaf) text-(--cream)">Join Us</button>
+<div className="border-(--gold)">Featured</div>
+```
+
+### Evolution & Flexibility
+
+The color theme is **intentionally flexible** to allow:
+
+- Seasonal color variations (e.g., autumn tones for specific campaigns)
+- Regional customization for different CHT districts
+- Dark/light mode implementations
+- High-contrast accessibility modes
+- Cultural event specific palettes
+
+### Design Inspiration
+
+This palette draws inspiration from:
+
+- 🏔️ Chittagong Hill Tracts landscape and biodiversity
+- 🎨 Traditional Marma textile patterns and craftsmanship
+- 🌍 Indigenous earth and nature symbolism
+- ♿ Modern accessibility and inclusive design principles
+- 🎭 Cultural festivals and celebrations of the Marma community
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Core Framework
@@ -88,16 +236,6 @@ bmsc-website/
 
 - **ESLint 9** - Code linting and quality
 - **Node Types 20** - TypeScript definitions
-
-## 🎨 Color Theme
-
-The site uses a custom Marma-inspired color palette:
-
-```css
---forest: #1a3a2a /* Deep forest green */ --forest-mid: #2d5a40 /* Mid forest */ --forest-light: #3d7a56
-  /* Light forest */ --leaf: #7ab648 /* Nature leaf green */ --gold: #c8922a /* Warm gold */ --sun: #f0a500
-  /* Vibrant sun */ --cream: #f8f3ea /* Warm cream */;
-```
 
 ## 🚀 Getting Started
 
