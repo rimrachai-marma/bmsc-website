@@ -1,0 +1,328 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #1a3a2a;
+  --color-forest-mid: #2d5a40;
+  --color-forest-light: #3d7a56;
+
+  --color-leaf: #7ab648;
+  --color-leaf-mid: #5a9632;
+  --color-leaf-pale: #e8f5d8;
+
+  --color-gold: #c8922a;
+  --color-gold-light: #e8b84b;
+  --color-gold-pale: #f5e6c8;
+
+  --color-sun: #f0a500;
+  --color-sun-light: #f7c842;
+
+  --color-cream: #f8f3ea;
+  --color-cream-dark: #ede5d4;
+
+  --color-earth: #8b5e3c;
+  --color-earth-light: #c4906a;
+
+  --color-muted: #6b6b5a;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+  --font-mono: "DM Mono", monospace;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.08);
+    }
+  }
+
+  --animate-fade-up: fade-up 0.8s ease forwards;
+  --animate-fade-in: fade-in 0.7s ease forwards;
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-spin-slow: spin-slow 20s linear infinite;
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+}
+
+:root {
+  --forest: #1a3a2a;
+  --forest-mid: #2d5a40;
+  --forest-light: #3d7a56;
+
+  --leaf: #7ab648;
+  --leaf-mid: #5a9632;
+  --leaf-pale: #e8f5d8;
+
+  --gold: #c8922a;
+  --gold-light: #e8b84b;
+  --gold-pale: #f5e6c8;
+
+  --sun: #f0a500;
+  --sun-light: #f7c842;
+
+  --cream: #f8f3ea;
+  --cream-dark: #ede5d4;
+
+  --earth: #8b5e3c;
+  --earth-light: #c4906a;
+
+  --muted: #6b6b5a;
+}
+
+html {
+}
+
+body {
+  font-family: "Source Serif 4", Georgia, serif;
+  background-color: #f8f3ea;
+  color: #2a2a2a;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", Georgia, serif;
+  line-height: 1.2;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f3ea;
+}
+::-webkit-scrollbar-thumb {
+  background: #5a9632;
+  border-radius: 3px;
+}
+
+@layer components {
+  .section-label {
+    font-family: "DM Mono", monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .nav-link {
+    position: relative;
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--leaf);
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover {
+    color: var(--leaf);
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--leaf);
+    color: var(--forest);
+    font-family: "DM Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-primary:hover {
+    background: var(--leaf-mid);
+    color: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(122, 182, 72, 0.3);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--cream);
+    font-family: "DM Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover {
+    border-color: var(--leaf);
+    color: var(--leaf);
+  }
+
+  .btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--forest);
+    color: var(--gold-light);
+    font-family: "DM Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-dark:hover {
+    background: var(--forest-mid);
+    transform: translateY(-2px);
+  }
+
+  .gold-rule {
+    width: 50px;
+    height: 2.5px;
+    background: linear-gradient(90deg, var(--leaf), var(--sun));
+    border-radius: 2px;
+  }
+
+  .card-hover {
+    transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 24px 48px rgba(26, 58, 42, 0.12);
+  }
+
+  .stat-number {
+    font-family: "Playfair Display", Georgia, serif;
+    @apply text-[2.5rem] md:text-[3.5rem];
+    font-weight: 900;
+    color: var(--sun);
+    line-height: 1;
+  }
+
+  .marma-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%237ab648' fill-opacity='0.06'%3E%3Cpath d='M30 0l30 30-30 30L0 30z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .delay-1 {
+    animation-delay: 0.1s;
+  }
+  .delay-2 {
+    animation-delay: 0.25s;
+  }
+  .delay-3 {
+    animation-delay: 0.4s;
+  }
+  .delay-4 {
+    animation-delay: 0.55s;
+  }
+  .delay-5 {
+    animation-delay: 0.7s;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease forwards;
+    opacity: 0;
+  }
+  .animate-fade-in {
+    animation: fade-in 0.7s ease forwards;
+    opacity: 0;
+  }
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+}
