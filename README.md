@@ -1,65 +1,110 @@
 # BMSC Website
 
-A modern, responsive website built with Next.js 16, React 19, and Tailwind CSS. This project showcases a contemporary web application with interactive components and optimized performance.
+**Bangladesh Marma Students Council Official Website**
 
-## Overview
+A modern, responsive website built with Next.js 16, React 19, and Tailwind CSS v4. This project showcases contemporary web development practices with interactive components, optimized performance, and beautiful design.
 
-BMSC Website is a full-stack web application featuring:
+## 🎯 About BMSC
 
-- **Server-Side Rendering (SSR)** with Next.js App Router for optimal SEO and performance
-- **Responsive Design** powered by Tailwind CSS 4
-- **Interactive UI Components** including carousels, modals, and dynamic content
-- **Type-Safe Development** with TypeScript
-- **Modern React** with React 19 and functional components
-- **Icon System** using Lucide React for consistent branding
+The Bangladesh Marma Students Council (BMSC) has been uniting Marma students across Bangladesh since **1989**, preserving culture, championing indigenous rights, and building leadership in the Chittagong Hill Tracts.
 
-## Tech Stack
+### Mission
 
-### Core Dependencies
+To unite Marma students across Bangladesh, fostering education, cultural pride, leadership, and advocacy for indigenous rights in the Chittagong Hill Tracts and beyond.
 
-- **Next.js 16.2.6** - React framework with App Router
-- **React 19.2.4 & React DOM 19.2.4** - UI library
-- **TypeScript 5** - Type safety and developer experience
-- **Tailwind CSS 4.3.0** - Utility-first CSS framework
-- **PostCSS 8.5.14** - CSS transformations
+### Core Principles
 
-### UI & Components
+- **শিক্ষা (Education)** - Empowering every Marma student with knowledge and opportunities
+- **সাম্য (Equality)** - Advocating for equal rights and dignity for all indigenous peoples
+- **মৈত্রী (Friendship)** - Building bridges of solidarity and unity
+- **প্রগতি (Progress)** - Driving social, cultural, and economic development
 
-- **Radix UI** (`@radix-ui/react-slot`) - Unstyled, accessible component primitives
-- **Embla Carousel** (8.6.0) - Lightweight carousel component
-- **Lucide React** (1.16.0) - Beautiful SVG icon library
-- **class-variance-authority** (0.7.1) - Component style variants
-- **clsx & tailwind-merge** - CSS class utilities
+## 🌟 Features
 
-### Development Tools
+- ✅ **Server-Side Rendering** with Next.js App Router for optimal SEO
+- ✅ **Responsive Mobile-First Design** - Perfect on all devices
+- ✅ **Tailwind CSS v4** - Modern utility-first styling with custom theme
+- ✅ **Interactive Carousels** - Embla Carousel with auto-play and indicators
+- ✅ **Type-Safe Code** - Full TypeScript support
+- ✅ **Accessible Components** - Built with Radix UI primitives
+- ✅ **Dark/Light Theming** - Custom color palette with CSS variables
+- ✅ **ESLint & Code Quality** - Consistent code standards
+- ✅ **Optimized Performance** - Fast load times and smooth interactions
 
-- **ESLint 9** - Code quality and consistency
-- **Node Types 20** - TypeScript node environment support
-
-## Project Structure
+## 📋 Project Structure
 
 ```
 bmsc-website/
-├── app/                    # Next.js App Router
-│   ├── page.tsx           # Home page
-│   └── layout.tsx         # Root layout
-├── lib/                   # Utility functions & helpers
-├── public/                # Static assets (images, fonts, etc.)
-├── components/            # Reusable UI components (optional)
-├── eslint.config.mjs      # ESLint configuration
-├── next.config.ts         # Next.js configuration
-├── tsconfig.json          # TypeScript configuration
-├── tailwind.config.js     # Tailwind CSS configuration
-├── postcss.config.mjs     # PostCSS configuration
-└── package.json           # Project dependencies
+├── app/
+│   ├── components/
+│   │   ├── Navbar.tsx           # Navigation bar with responsive menu
+│   │   ├── Footer.tsx           # Footer with links and info
+│   │   ├── CorePrinciples.tsx   # Mission, vision, goals section
+│   │   └── ui/
+│   │       └── carousel.tsx     # Custom carousel component
+│   ├── layout.tsx               # Root layout
+│   ├── page.tsx                 # Home page
+│   ├── about/page.tsx           # About us with timeline
+│   ├── programs/page.tsx        # Programs & initiatives
+│   ├── gallery/page.tsx         # Photo & video gallery
+│   ├── news/page.tsx            # News & events
+│   ├── contact/page.tsx         # Contact form
+│   ├── join/page.tsx            # Join membership
+│   ├── archive/page.tsx         # Document archive
+│   ├── globals.css              # Global styles + Tailwind theme
+│   └── page.module.css          # Page-specific styles
+├── lib/
+│   └── utils.ts                 # Utility functions (cn, etc.)
+├── public/                      # Static assets
+├── eslint.config.mjs            # ESLint configuration
+├── next.config.ts               # Next.js configuration
+├── tsconfig.json                # TypeScript configuration
+├── postcss.config.mjs           # PostCSS configuration
+└── package.json                 # Dependencies & scripts
 ```
 
-## Getting Started
+## 🛠️ Tech Stack
+
+### Core Framework
+
+- **Next.js 16.2.6** - React framework with App Router & SSR
+- **React 19.2.4** - Modern UI library with hooks
+- **TypeScript 5** - Type safety and better DX
+
+### Styling
+
+- **Tailwind CSS 4.3.0** - Utility-first CSS framework (v4 syntax)
+- **PostCSS 8.5.14** - CSS transformations
+- **tailwind-merge & clsx** - Class name utilities
+
+### Components & UI
+
+- **Embla Carousel 8.6.0** - Lightweight carousel library
+- **Lucide React 1.16.0** - Beautiful SVG icons
+- **Radix UI (react-slot)** - Accessible component primitives
+- **class-variance-authority** - Component style variants
+
+### Development
+
+- **ESLint 9** - Code linting and quality
+- **Node Types 20** - TypeScript definitions
+
+## 🎨 Color Theme
+
+The site uses a custom Marma-inspired color palette:
+
+```css
+--forest: #1a3a2a /* Deep forest green */ --forest-mid: #2d5a40 /* Mid forest */ --forest-light: #3d7a56
+  /* Light forest */ --leaf: #7ab648 /* Nature leaf green */ --gold: #c8922a /* Warm gold */ --sun: #f0a500
+  /* Vibrant sun */ --cream: #f8f3ea /* Warm cream */;
+```
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
 - Node.js 18+
-- npm or yarn package manager
+- npm or yarn
 
 ### Installation
 
@@ -84,17 +129,17 @@ Start the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser. The page will auto-refresh as you make changes to `app/page.tsx`.
+Open [http://localhost:3000](http://localhost:3000) to see the site. Changes auto-refresh.
 
-### Build & Production
+### Build for Production
 
-Build the application for production:
+Build the application:
 
 ```bash
 npm run build
 ```
 
-Start the production server:
+Start production server:
 
 ```bash
 npm start
@@ -102,93 +147,133 @@ npm start
 
 ### Linting
 
-Run ESLint to check code quality:
+Check code quality:
 
 ```bash
 npm run lint
 ```
 
-## Development Workflow
+## 📄 Pages
 
-### Creating Components
+- **Home** (`/`) - Hero, stats, programs, testimonials, gallery, CTA
+- **About** (`/about`) - Mission, vision, goals, timeline, structure, leadership
+- **Programs** (`/programs`) - BMSC initiatives and programs
+- **Gallery** (`/gallery`) - Photo and video archive
+- **News** (`/news`) - Latest updates and events
+- **Contact** (`/contact`) - Contact form and information
+- **Join** (`/join`) - Membership information and application
+- **Archive** (`/archive`) - Document and press release archive
 
-Components should be placed in a `components/` directory and follow these patterns:
+## 🎯 Component Highlights
 
-```typescript
-// components/Button.tsx
-import { forwardRef } from 'react';
+### Carousel with Indicators
 
-const Button = forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
-  ({ className, ...props }, ref) => (
-    <button
-      ref={ref}
-      className={`px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 ${className}`}
-      {...props}
-    />
-  )
-);
-Button.displayName = 'Button';
+- Auto-play with configurable delay
+- Previous/Next navigation buttons
+- Visual progress indicator bars
+- Responsive on all devices
+- Touch-friendly controls
 
-export { Button };
-```
+### Timeline
 
-### Styling
+- Responsive vertical timeline
+- Responsive on mobile (no vertical line)
+- Desktop view with connector line
+- Historical journey from 1989
 
-This project uses **Tailwind CSS 4** for styling. Define custom styles in `tailwind.config.js` and apply utility classes directly to elements.
+### Gallery
 
-### Adding Pages
+- Masonry layout on desktop
+- Responsive grid on mobile/tablet
+- Hover effects and overlays
+- API-ready for dynamic content
 
-Create new pages in the `app/` directory following Next.js App Router conventions:
+### Navigation
 
-```typescript
-// app/about/page.tsx
-export default function AboutPage() {
-  return <div>About Page</div>;
-}
-```
+- Fixed header with scroll detection
+- Responsive mobile menu
+- Logo and brand identity
+- Active link highlighting
 
-## Features
+## 🔧 Tailwind CSS v4 Features Used
 
-- ✅ Server-side rendering for SEO optimization
-- ✅ Responsive mobile-first design
-- ✅ TypeScript for type safety
-- ✅ Carousel support with Embla
-- ✅ Icon library with Lucide React
-- ✅ Code linting with ESLint
-- ✅ Optimized font loading
-- ✅ Fast refresh during development
+- **Modern syntax**: `border-(--gold)`, `text-(--gold)!` instead of old syntax
+- **Linear gradients**: `bg-linear-to-br` with custom colors
+- **CSS custom properties**: Theme colors defined in `@theme` block
+- **Important modifier**: Moved to end `class!` instead of `!class`
 
-## Deployment
+## 📱 Responsive Breakpoints
 
-### Deploy to Vercel (Recommended)
+- **Mobile**: < 640px (1 column)
+- **Tablet**: 640px - 1024px (2-3 columns)
+- **Desktop**: 1024px+ (4+ columns)
 
-The easiest way to deploy is using [Vercel](https://vercel.com):
+All components are mobile-first and fully responsive.
 
-1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
-2. Import the project to Vercel
-3. Vercel will automatically detect Next.js and configure the build settings
-4. Your site will be live after deployment
+## 🌐 Deployment
 
-For more details, see [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+### Vercel (Recommended)
 
-### Deploy to Other Platforms
+1. Push code to GitHub/GitLab/Bitbucket
+2. Import project to Vercel
+3. Vercel auto-detects Next.js configuration
+4. Automatic deployments on push
 
-This is a standard Next.js application and can be deployed to any platform that supports Node.js:
+### Other Platforms
 
 - AWS Amplify
 - Netlify
 - Docker containers
 - Traditional Node.js hosting
 
-## Resources
+## 📚 Resources
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [React Documentation](https://react.dev)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [Radix UI Documentation](https://www.radix-ui.com/docs/primitives/overview/introduction)
-- [Embla Carousel Documentation](https://www.embla-carousel.com/)
+- [Next.js Docs](https://nextjs.org/docs)
+- [Tailwind CSS v4](https://tailwindcss.com/docs)
+- [React 19](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Embla Carousel](https://www.embla-carousel.com/)
+- [Lucide Icons](https://lucide.dev/)
 
-## License
+## 📝 Code Examples
 
-This project is private and proprietary to BMSC.
+### Adding a New Page
+
+```typescript
+// app/new-page/page.tsx
+export default function NewPage() {
+  return (
+    <section className="py-24 bg-cream">
+      <div className="max-w-[1280px] mx-auto px-8">
+        <h1>Page Title</h1>
+      </div>
+    </section>
+  );
+}
+```
+
+### Using the Carousel
+
+```typescript
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/app/components/ui/carousel";
+
+<Carousel>
+  <CarouselContent>
+    {items.map((item) => (
+      <CarouselItem key={item.id}>
+        {item.content}
+      </CarouselItem>
+    ))}
+  </CarouselContent>
+  <CarouselPrevious />
+  <CarouselNext />
+</Carousel>
+```
+
+## 📄 License
+
+This project is private and proprietary to Bangladesh Marma Students Council (BMSC).
+
+---
+
+**Built with ❤️ for the Marma Community**
