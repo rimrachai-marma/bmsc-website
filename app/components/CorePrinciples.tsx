@@ -47,14 +47,14 @@ export default function CorePrinciples() {
             Four Core Principles
           </h2>
           {/* Bengali subtitle */}
-          <p className="mt-3 font-mono text-[0.85rem] sm:text-[1rem] text-gold tracking-widest flex justify-center items-center gap-3 sm:gap-4">
-            <span>শিক্ষা</span>
+          <p className="mt-3 text-[0.85rem] sm:text-[1rem] text-gold tracking-widest flex justify-center items-center gap-3 sm:gap-4">
+            <span className="font-bengali">শিক্ষা</span>
             <span>&middot;</span>
-            <span>সাম্য</span>
+            <span className="font-bengali">সাম্য</span>
             <span>&middot;</span>
-            <span>মৈত্রী</span>
+            <span className="font-bengali">মৈত্রী</span>
             <span>&middot;</span>
-            <span>প্রগতি</span>
+            <span className="font-bengali">প্রগতি</span>
           </p>
           <div className="gold-rule mx-auto mt-5" />
         </div>
@@ -80,7 +80,7 @@ export default function CorePrinciples() {
               </div>
 
               {/* Bengali name — large, prominent */}
-              <div className="font-display font-bold text-sun text-[2rem] leading-none mb-1">{bengali}</div>
+              <div className="font-bengali font-bold text-sun text-[2rem] leading-none mb-1">{bengali}</div>
 
               {/* English name */}
               <div className="font-mono text-[0.65rem] tracking-[0.2em] uppercase text-leaf mb-5">{english}</div>

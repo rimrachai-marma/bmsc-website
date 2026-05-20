@@ -314,10 +314,10 @@ export default function HomePage() {
                     ].map((v) => (
                       <span
                         key={v.en}
-                        className="sm:px-3.5 sm:py-1.5 sm:border border-gold/30 font-mono flex flex-col leading-tight"
+                        className="sm:px-3.5 sm:py-1.5 sm:border border-gold/30 flex flex-col leading-tight"
                       >
-                        <span className="text-sun text-[0.75rem] sm:text-[0.95rem]">{v.bn}</span>
-                        <span className="text-cream/50 text-[0.55rem] sm:text-[0.6rem] tracking-widest uppercase">
+                        <span className="font-bengali text-sun text-[0.75rem] sm:text-[0.95rem]">{v.bn}</span>
+                        <span className="font-mono text-cream/50 text-[0.55rem] sm:text-[0.6rem] tracking-widest uppercase">
                           {v.en}
                         </span>
                       </span>

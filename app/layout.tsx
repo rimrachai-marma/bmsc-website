@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Playfair_Display, Source_Serif_4, DM_Mono } from "next/font/google";
+import { Playfair_Display, Source_Serif_4, DM_Mono, Noto_Sans_Bengali } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -23,6 +23,12 @@ const dmMono = DM_Mono({
   variable: "--font-mono",
 });
 
+const notoSansBengali = Noto_Sans_Bengali({
+  subsets: ["bengali"],
+  weight: ["400", "500", "700"],
+  variable: "--font-bengali",
+});
+
 export const metadata: Metadata = {
   title: "BMSC — Bangladesh Marma Students Council",
   description:
@@ -34,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${playfair.variable} ${sourceSerif.variable} ${dmMono.variable}`}
+      className={`${playfair.variable} ${sourceSerif.variable} ${dmMono.variable} ${notoSansBengali.variable}`}
     >
       <body>
         <Navbar />

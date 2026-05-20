@@ -27,6 +27,7 @@
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "Source Serif 4", Georgia, serif;
   --font-mono: "DM Mono", monospace;
+  --font-bengali: "Noto Sans Bengali", sans-serif;
 
   @keyframes fade-up {
     from {
@@ -116,8 +117,7 @@
   --muted: #6b6b5a;
 }
 
-html {
-}
+
 
 body {
   font-family: "Source Serif 4", Georgia, serif;

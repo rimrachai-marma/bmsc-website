@@ -128,7 +128,7 @@ export default function Footer() {
             <div className="p-4 border border-leaf/15 bg-leaf/4 flex items-center gap-4">
               <Image src="/bmsc-logo.png" alt="BMSC" width={38} height={38} className="rounded-full opacity-85" />
               <div>
-                <p className="font-mono text-[0.57rem] tracking-widest uppercase text-leaf mb-1">
+                <p className="font-bengali text-[0.57rem] tracking-widest uppercase text-leaf mb-1">
                   বাংলাদেশ মারমা স্টুডেন্টস কাউন্সিল
                 </p>
                 <p className="text-[0.77rem] text-cream/45 leading-relaxed">Serving the Marma community since 1989.</p>
