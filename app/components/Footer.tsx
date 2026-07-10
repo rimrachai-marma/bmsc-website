@@ -58,7 +58,7 @@ export default function Footer() {
             </p>
 
             {/* Est. badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 border border-leaf/25 bg-leaf/6 mb-5">
+            <div className="w-full inline-flex items-center gap-2.5 px-4 py-2 border border-leaf/25 bg-leaf/6 mb-5">
               <div className="w-1.5 h-1.5 rounded-full bg-leaf" />
               <span className="font-mono text-[0.58rem] tracking-widest uppercase text-cream/55">Established 1989</span>
             </div>
