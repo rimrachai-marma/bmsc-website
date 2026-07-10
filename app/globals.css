@@ -144,7 +144,6 @@ h5 {
 }
 ::-webkit-scrollbar-thumb {
   background: #5a9632;
-  border-radius: 3px;
 }
 
 @layer components {
